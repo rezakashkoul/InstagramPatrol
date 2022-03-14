@@ -23,7 +23,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="kcb-T9-g8w"/>
                                 </constraints>
-                                <mutableString key="text">csrftoken=1CKAzQEaJL5cqV80kTcF5JJzqXLkdK1F; ds_user_id=648591872; rur="CLN\054648591872\0541678793322:01f7051d52a3b22758338363265aecba78cd27392c586a8af85a87846cf7ee62eb3e7dba"; shbid="12170\054648591872\0541678701658:01f7564a286704c369b536b6a8cb7b3ba05c02bad86736733e05acd2ba51891e46c637c9"; shbts="1647165658\054648591872\0541678701658:01f731a48a23b2080eb6721d5c84042758cb60dc7fd9c5e94be2e3835808c6149bdc7d73"; sessionid=648591872%3AtSQkA9fBkpFpZ3%3A15; ig_did=88915EEB-A46C-49F8-A757-F362EDBCE8DF; mid=YdidKAAEAAGz9ju7mFhdSqOLdQ8R</mutableString>
+                                <mutableString key="text">csrftoken=1CKAzQEaJL5cqV80kTcF5JJzqXLkdK1F; ds_user_id=648591872; rur="CLN\054648591872\0541678805270:01f749c7b6cb9b15144f3b5ce63953c2ec4aefef515f4e977627074e618fa2b64a78651a"; shbid="12170\054648591872\0541678701658:01f7564a286704c369b536b6a8cb7b3ba05c02bad86736733e05acd2ba51891e46c637c9"; shbts="1647165658\054648591872\0541678701658:01f731a48a23b2080eb6721d5c84042758cb60dc7fd9c5e94be2e3835808c6149bdc7d73"; sessionid=648591872%3AtSQkA9fBkpFpZ3%3A15; ig_did=88915EEB-A46C-49F8-A757-F362EDBCE8DF; mid=YdidKAAEAAGz9ju7mFhdSqOLdQ8R</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

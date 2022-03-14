@@ -11,15 +11,14 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    
-    var cookie = ""
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         showLogin()
         title = "Search for users"
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        NetworkManager.shared.searchUser(userName: searchBar.text ?? "")
     }
     
     func showLogin() {
@@ -35,18 +34,19 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: LoginViewControllerDelegate {
     
-    func setCookie(cookie: String) {
-        self.cookie = cookie
+    func setCookie(userCookie: String) {
+        cookie = userCookie
     }
 }
 
-//extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//}
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+}
+ 

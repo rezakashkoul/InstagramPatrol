@@ -16,6 +16,9 @@
 		F788D69227DF6F9700A4B822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F788D69027DF6F9700A4B822 /* LaunchScreen.storyboard */; };
 		F7CFCC5F27DF70A5008CEF41 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = F7CFCC5E27DF70A5008CEF41 /* netfox */; };
 		F7CFCC6127DF722C008CEF41 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFCC6027DF722C008CEF41 /* SearchViewController.swift */; };
+		F7CFCC6327DF757E008CEF41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFCC6227DF757E008CEF41 /* User.swift */; };
+		F7CFCC6527DF75B6008CEF41 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFCC6427DF75B6008CEF41 /* NetworkManager.swift */; };
+		F7CFCC6727DF7617008CEF41 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFCC6627DF7617008CEF41 /* GlobalVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		F788D69127DF6F9700A4B822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F788D69327DF6F9700A4B822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CFCC6027DF722C008CEF41 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F7CFCC6227DF757E008CEF41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F7CFCC6427DF75B6008CEF41 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F7CFCC6627DF7617008CEF41 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 			children = (
 				F788D68527DF6F9600A4B822 /* AppDelegate.swift */,
 				F788D68727DF6F9600A4B822 /* SceneDelegate.swift */,
+				F7CFCC6227DF757E008CEF41 /* User.swift */,
+				F7CFCC6427DF75B6008CEF41 /* NetworkManager.swift */,
+				F7CFCC6627DF7617008CEF41 /* GlobalVariables.swift */,
 				F788D68927DF6F9600A4B822 /* LoginViewController.swift */,
 				F7CFCC6027DF722C008CEF41 /* SearchViewController.swift */,
 				F788D68B27DF6F9600A4B822 /* Main.storyboard */,
@@ -217,9 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CFCC6527DF75B6008CEF41 /* NetworkManager.swift in Sources */,
 				F788D68A27DF6F9600A4B822 /* LoginViewController.swift in Sources */,
 				F788D68627DF6F9600A4B822 /* AppDelegate.swift in Sources */,
 				F7CFCC6127DF722C008CEF41 /* SearchViewController.swift in Sources */,
+				F7CFCC6727DF7617008CEF41 /* GlobalVariables.swift in Sources */,
+				F7CFCC6327DF757E008CEF41 /* User.swift in Sources */,
 				F788D68827DF6F9600A4B822 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -350,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

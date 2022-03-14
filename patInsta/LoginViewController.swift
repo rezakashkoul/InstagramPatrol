@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginViewControllerDelegate: AnyObject {
-    func setCookie(cookie: String)
+    func setCookie(userCookie: String)
 }
 
 class LoginViewController: UIViewController {
@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonAction(_ sender: Any) {
         delegate?.setCookie(cookie: textView.text)
         dismiss(animated: true)
-    }
+    } 
     
     weak var delegate: LoginViewControllerDelegate?
     
