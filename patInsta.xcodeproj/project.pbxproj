@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E02B2D2C0C004C21A7D54120 /* Pods_patInsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CE46924FDEDD713313101F /* Pods_patInsta.framework */; };
 		F788D68627DF6F9600A4B822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68527DF6F9600A4B822 /* AppDelegate.swift */; };
 		F788D68827DF6F9600A4B822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68727DF6F9600A4B822 /* SceneDelegate.swift */; };
-		F788D68A27DF6F9600A4B822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68927DF6F9600A4B822 /* ViewController.swift */; };
+		F788D68A27DF6F9600A4B822 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68927DF6F9600A4B822 /* LoginViewController.swift */; };
 		F788D68D27DF6F9600A4B822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F788D68B27DF6F9600A4B822 /* Main.storyboard */; };
 		F788D68F27DF6F9700A4B822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F788D68E27DF6F9700A4B822 /* Assets.xcassets */; };
 		F788D69227DF6F9700A4B822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F788D69027DF6F9700A4B822 /* LaunchScreen.storyboard */; };
+		F7CFCC5F27DF70A5008CEF41 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = F7CFCC5E27DF70A5008CEF41 /* netfox */; };
+		F7CFCC6127DF722C008CEF41 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFCC6027DF722C008CEF41 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		435F377A90A70C70B741A613 /* Pods-patInsta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-patInsta.debug.xcconfig"; path = "Target Support Files/Pods-patInsta/Pods-patInsta.debug.xcconfig"; sourceTree = "<group>"; };
+		B4CE46924FDEDD713313101F /* Pods_patInsta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_patInsta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D286DFC8C3ED158AF151D417 /* Pods-patInsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-patInsta.release.xcconfig"; path = "Target Support Files/Pods-patInsta/Pods-patInsta.release.xcconfig"; sourceTree = "<group>"; };
 		F788D68227DF6F9600A4B822 /* patInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = patInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F788D68527DF6F9600A4B822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F788D68727DF6F9600A4B822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F788D68927DF6F9600A4B822 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F788D68927DF6F9600A4B822 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F788D68C27DF6F9600A4B822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F788D68E27DF6F9700A4B822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F788D69127DF6F9700A4B822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F788D69327DF6F9700A4B822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CFCC6027DF722C008CEF41 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CFCC5F27DF70A5008CEF41 /* netfox in Frameworks */,
+				E02B2D2C0C004C21A7D54120 /* Pods_patInsta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EB1EA6C383891E95396DFDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				435F377A90A70C70B741A613 /* Pods-patInsta.debug.xcconfig */,
+				D286DFC8C3ED158AF151D417 /* Pods-patInsta.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F0867F5F6EEB3B2A802FBE51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4CE46924FDEDD713313101F /* Pods_patInsta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F788D67927DF6F9500A4B822 = {
 			isa = PBXGroup;
 			children = (
 				F788D68427DF6F9600A4B822 /* patInsta */,
 				F788D68327DF6F9600A4B822 /* Products */,
+				8EB1EA6C383891E95396DFDF /* Pods */,
+				F0867F5F6EEB3B2A802FBE51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +86,8 @@
 			children = (
 				F788D68527DF6F9600A4B822 /* AppDelegate.swift */,
 				F788D68727DF6F9600A4B822 /* SceneDelegate.swift */,
-				F788D68927DF6F9600A4B822 /* ViewController.swift */,
+				F788D68927DF6F9600A4B822 /* LoginViewController.swift */,
+				F7CFCC6027DF722C008CEF41 /* SearchViewController.swift */,
 				F788D68B27DF6F9600A4B822 /* Main.storyboard */,
 				F788D68E27DF6F9700A4B822 /* Assets.xcassets */,
 				F788D69027DF6F9700A4B822 /* LaunchScreen.storyboard */,
@@ -74,15 +103,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F788D69627DF6F9700A4B822 /* Build configuration list for PBXNativeTarget "patInsta" */;
 			buildPhases = (
+				6752C1AC3A89D2E3D410E4EA /* [CP] Check Pods Manifest.lock */,
 				F788D67E27DF6F9600A4B822 /* Sources */,
 				F788D67F27DF6F9600A4B822 /* Frameworks */,
 				F788D68027DF6F9600A4B822 /* Resources */,
+				12F0C27118B78AAAD8A39C72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = patInsta;
+			packageProductDependencies = (
+				F7CFCC5E27DF70A5008CEF41 /* netfox */,
+			);
 			productName = patInsta;
 			productReference = F788D68227DF6F9600A4B822 /* patInsta.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +145,9 @@
 				Base,
 			);
 			mainGroup = F788D67927DF6F9500A4B822;
+			packageReferences = (
+				F7CFCC5D27DF70A5008CEF41 /* XCRemoteSwiftPackageReference "netfox" */,
+			);
 			productRefGroup = F788D68327DF6F9600A4B822 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,13 +170,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12F0C27118B78AAAD8A39C72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-patInsta/Pods-patInsta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-patInsta/Pods-patInsta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-patInsta/Pods-patInsta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6752C1AC3A89D2E3D410E4EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-patInsta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F788D67E27DF6F9600A4B822 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F788D68A27DF6F9600A4B822 /* ViewController.swift in Sources */,
+				F788D68A27DF6F9600A4B822 /* LoginViewController.swift in Sources */,
 				F788D68627DF6F9600A4B822 /* AppDelegate.swift in Sources */,
+				F7CFCC6127DF722C008CEF41 /* SearchViewController.swift in Sources */,
 				F788D68827DF6F9600A4B822 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +362,7 @@
 		};
 		F788D69727DF6F9700A4B822 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 435F377A90A70C70B741A613 /* Pods-patInsta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +391,7 @@
 		};
 		F788D69827DF6F9700A4B822 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D286DFC8C3ED158AF151D417 /* Pods-patInsta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F7CFCC5D27DF70A5008CEF41 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F7CFCC5E27DF70A5008CEF41 /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7CFCC5D27DF70A5008CEF41 /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F788D67A27DF6F9500A4B822 /* Project object */;
 }

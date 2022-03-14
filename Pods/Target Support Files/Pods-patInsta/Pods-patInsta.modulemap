@@ -1,0 +1,6 @@
+framework module Pods_patInsta {
+  umbrella header "Pods-patInsta-umbrella.h"
+
+  export *
+  module * { export * }
+}
