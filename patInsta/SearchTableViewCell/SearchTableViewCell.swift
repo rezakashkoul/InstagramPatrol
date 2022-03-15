@@ -19,7 +19,8 @@ class SearchTableViewCell: UITableViewCell {
     }
     
     fileprivate func setupCell() {
-        profileImage.layer.cornerRadius = 25
+        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2;
+        profileImage.clipsToBounds = true
         profileImage.layer.borderColor = UIColor.white.cgColor
         profileImage.layer.borderWidth = 2
     }

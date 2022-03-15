@@ -19,19 +19,20 @@ class SearchViewModel: NSObject {
     
     func searchUser(userName: String) {
         
-        let url = "https://www.instagram.com/web/search/topsearch/?context=blended&query=\(userName)&rank_token=0.9775297161730986&include_reel=true"
-        let headers = [ "Cookie" : cookie ,
+        let url = "https://www.instagram.com/web/search/topsearch/?context=blended&query=shakibamoradi&rank_token=0.666149709110778&include_reel=true"
+        let headers = [
                         "Accept" : "*/*",
                         "Accept-Language" : "en-US,en;q=0.9",
                         "Accept-Encoding" : "gzip, deflate, br",
                         "Host" : "www.instagram.com",
-                        "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15",
+                        "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15",
                         "Connection" : " keep-alive",
                         "Referer" : " https://www.instagram.com/",
+                        "Cookie" : cookie ,
                         "X-ASBD-ID" : "198387",
                         "X-Requested-With" : "XMLHttpRequest",
                         "X-IG-App-ID" : "936619743392459",
-                        "X-IG-WWW-Claim" : "hmac.AR3L09VMpCg0OPafUJ2I1ohvcQa01YecAxjUVx7sWbBlHLz9"
+                        "X-IG-WWW-Claim" : "hmac.AR3i_Zolo-GMNQQS8xA13FHD-XmcSMC_9smGx7qgDDv1gznF"
         ]
         
         var users: [UserElement]?
