@@ -12,21 +12,20 @@ protocol LoginViewControllerDelegate: AnyObject {
 }
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func loginButtonAction(_ sender: Any) {
-        delegate?.setCookie(cookie: textView.text)
+        delegate?.setCookie(userCookie: textView.text)
         dismiss(animated: true)
-    } 
+    }
     
     weak var delegate: LoginViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Set cookie and login"
     }
-
-
+    
+    
 }
 

@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct UserData: Codable {
+struct UserQuery: Codable {
     let users: [UserElement]
     let rank_token: String
     let status: String
