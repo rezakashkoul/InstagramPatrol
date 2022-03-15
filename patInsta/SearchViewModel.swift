@@ -19,7 +19,7 @@ class SearchViewModel: NSObject {
     
     func searchUser(userName: String) {
         
-        let url = "https://www.instagram.com/web/search/topsearch/?context=blended&query=rezakashkoul&rank_token=0.9775297161730986&include_reel=true"
+        let url = "https://www.instagram.com/web/search/topsearch/?context=blended&query=\(userName)&rank_token=0.9775297161730986&include_reel=true"
         let headers = [ "Cookie" : cookie2 ,
                         "Accept" : "*/*",
                         "Accept-Language" : "en-US,en;q=0.9",
@@ -46,7 +46,7 @@ class SearchViewModel: NSObject {
 //
 //        }
         
-        
+         
         
         var users: [UserElement]?
         

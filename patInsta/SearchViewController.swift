@@ -28,11 +28,19 @@ class SearchViewController: UIViewController {
     }
      
     func loadData() {
-        searchViewModel.searchUser(userName: "reza")
+        searchBar
+            .rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .subscribe(onNext: { text in
+                print(text)
+                self.searchViewModel.searchUser(userName: text)
+            })
+            .disposed(by: disposeBag)
     }
     
     func bindView() {
-        
+
         searchViewModel.tableRowsItem.bind(to: rows)
             .disposed(by: disposeBag)
         
