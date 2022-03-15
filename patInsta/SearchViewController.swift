@@ -26,7 +26,7 @@ class SearchViewController: UIViewController {
         bindView()
         loadData()
     }
-     
+    
     func loadData() {
         searchBar
             .rx.text
@@ -40,7 +40,7 @@ class SearchViewController: UIViewController {
     }
     
     func bindView() {
-
+        
         searchViewModel.tableRowsItem.bind(to: rows)
             .disposed(by: disposeBag)
         
@@ -55,7 +55,6 @@ class SearchViewController: UIViewController {
             cell.profileImage.image = UIImage(named: "\(item.user.profilePicURL)")
         }
         .disposed(by: disposeBag)
-        
     }
     
     func showLogin() {

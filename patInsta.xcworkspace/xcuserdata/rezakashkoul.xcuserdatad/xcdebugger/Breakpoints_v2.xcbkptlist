@@ -46,8 +46,8 @@
             filePath = "patInsta/SearchViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "searchUser(userName:)"
             landmarkType = "7">
          </BreakpointContent>
