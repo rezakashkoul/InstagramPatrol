@@ -14,7 +14,6 @@ protocol LoginViewControllerDelegate: AnyObject {
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
-    
     @IBAction func loginButtonAction(_ sender: Any) {
 //        delegate?.setCookie(userCookie: textView.text)
         dismiss(animated: true)
@@ -24,6 +23,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.layer.cornerRadius = 20
     }
     
     

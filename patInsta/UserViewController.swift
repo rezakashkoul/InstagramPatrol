@@ -16,7 +16,7 @@ class UserViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let disposeBag = DisposeBag()
-    var selectedUser: UserElement? {
+    var selectedUsers: [UserElement]? {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -29,47 +29,41 @@ class UserViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchTableViewCell")
-//        loadUsersData()
-
+        
     }
-    
-//    func loadUsersData() {
-//        if let data = UserDefaults.standard.data(forKey: "user") {
-//            do {
-//                let decoder = JSONDecoder()
-//                selectedUsers = try decoder.decode([UserElement].self, from: data)
-//            } catch {
-//                print("Unable to Decode userData (\(error))")
-//            }
-//        }
-//    }
     
 }
 
 extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return selectedUsers?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
-        cell.userNameLabel.text = userList?[indexPath.row].user.username
-        let url = URL(string: userList?[indexPath.row].user.profilePicURL ?? "")
+        
+        cell.userNameLabel.text = selectedUsers?[indexPath.row].user.username
+        let url = URL(string: selectedUsers?[indexPath.row].user.profilePicURL ?? "")
         do {
-            DispatchQueue.main.async {
+            DispatchQueue.global(qos: .background).async {
                 let data = try? Data(contentsOf: url!)
-                cell.profileImage.image = UIImage(data: data!)
+                DispatchQueue.main.async {
+                    cell.profileImage.image = UIImage(data: data!)
+                }
             }
+
         }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(selectedUser)
         searchFollwers(pk: "648591872")
-//        searchFollwers(pk: (selectedUser?.user.pk)!)
+        //        searchFollwers(pk: (selectedUser?.user.pk)!)
     }
     
     
@@ -81,8 +75,8 @@ extension UserViewController {
         
         let url = "https://i.instagram.com/api/v1/friendships/648591872/followers/?count=12&max_id=100&search_surface=follow_list_page"
         
-//        let url = "https://i.instagram.com/api/v1/friendships/648591872/followers/?count=12&max_id=100&search_surface=follow_list_page"
-//
+        //        let url = "https://i.instagram.com/api/v1/friendships/648591872/followers/?count=12&max_id=100&search_surface=follow_list_page"
+        //
         
         let headers = [
             "Accept" : "*/*",

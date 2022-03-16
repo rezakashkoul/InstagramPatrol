@@ -35,7 +35,7 @@ class SearchViewController: UIViewController {
             }
         }
     }
-    var selectedUsers : [UserElement]?
+    var selectedUsers = [UserElement]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +45,6 @@ class SearchViewController: UIViewController {
         searchBar.delegate = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchTableViewCell")
-//        loadUsersData()
-//        searchUser(userName: searchBar.text!)
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -115,19 +113,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        saveUsersData(userData: userList![indexPath.row])
         DispatchQueue.main.async {[self] in
             let vc = storyboard?.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
-//            if selectedUsers != nil && selectedUsers!.contains(where: {$0.user.username == userList?[indexPath.row].user.username}) {
-//            selectedUsers?.append((userList?[indexPath.row])!)
-//            vc.selectedUsers = selectedUsers!
-//
-            
-            
-            guard let userData = userList?[indexPath.row] else { return }
-//            }
-//            selectedUsers?.append(userData)
-            vc.selectedUser = userData
+            if let userData = userList?[indexPath.row] {
+                loadUsersData()
+                if !selectedUsers.contains(where: {$0.user.username == userData.user.username}) {
+                    selectedUsers.append(userData)
+                    saveUsersData(userData: userList![indexPath.row])
+                }
+                vc.selectedUsers = self.selectedUsers
+            }
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -175,27 +170,26 @@ extension SearchViewController {
 
 extension SearchViewController {
     
-//    func saveUsersData(userData: UserElement) {
-//        do {
-//            selectedUsers?.append(userData)
-//            let encoder = JSONEncoder()
-//            let data = try encoder.encode(selectedUsers)
-//            UserDefaults.standard.set(data, forKey: "userMemory")
-//        } catch {
-//            print("Unable to Encode userData (\(error.localizedDescription))")
-//        }
-//    }
-//
-//    func loadUsersData() {
-//        if let data = UserDefaults.standard.data(forKey: "userMemory") {
-//            do {
-//                let decoder = JSONDecoder()
-//                selectedUsers = try decoder.decode([UserElement].self, from: data)
-//            } catch {
-//                print("Unable to Decode userData (\(error))")
-//            }
-//        }
-//    }
+    func saveUsersData(userData: UserElement) {
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(selectedUsers)
+            UserDefaults.standard.set(data, forKey: "userMemory")
+        } catch {
+            print("Unable to Encode userData (\(error.localizedDescription))")
+        }
+    }
+    
+    func loadUsersData() {
+        if let data = UserDefaults.standard.data(forKey: "userMemory") {
+            do {
+                let decoder = JSONDecoder()
+                selectedUsers = try decoder.decode([UserElement].self, from: data)
+            } catch {
+                print("Unable to Decode userData (\(error))")
+            }
+        }
+    }
 }
 
 //    func loadData() {
