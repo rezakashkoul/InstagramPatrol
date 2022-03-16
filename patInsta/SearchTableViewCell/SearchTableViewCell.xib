@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRy-A9-hvc">
-                        <rect key="frame" x="106" y="32.5" width="316" height="21"/>
+                        <rect key="frame" x="114" y="32.5" width="308" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="cRy-A9-hvc" firstAttribute="leading" secondItem="ObM-Eb-AVa" secondAttribute="trailing" constant="8" id="9aa-zA-FUT"/>
+                    <constraint firstItem="cRy-A9-hvc" firstAttribute="leading" secondItem="ObM-Eb-AVa" secondAttribute="trailing" constant="16" id="9aa-zA-FUT"/>
                     <constraint firstItem="ObM-Eb-AVa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="HPq-Sk-azw"/>
                     <constraint firstItem="ObM-Eb-AVa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NBA-mn-6WK"/>
                     <constraint firstAttribute="bottom" secondItem="ObM-Eb-AVa" secondAttribute="bottom" constant="8" id="Rgk-IS-bp6"/>

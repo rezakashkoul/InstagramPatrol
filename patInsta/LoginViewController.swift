@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func loginButtonAction(_ sender: Any) {
-        delegate?.setCookie(userCookie: textView.text)
+//        delegate?.setCookie(userCookie: textView.text)
         dismiss(animated: true)
     }
     

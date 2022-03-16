@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E02B2D2C0C004C21A7D54120 /* Pods_patInsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CE46924FDEDD713313101F /* Pods_patInsta.framework */; };
+		F738905727E127B2006BB61E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738905627E127B2006BB61E /* UserViewController.swift */; };
+		F738905927E13C4C006BB61E /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738905827E13C4C006BB61E /* Followers.swift */; };
 		F788D68627DF6F9600A4B822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68527DF6F9600A4B822 /* AppDelegate.swift */; };
 		F788D68827DF6F9600A4B822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68727DF6F9600A4B822 /* SceneDelegate.swift */; };
 		F788D68A27DF6F9600A4B822 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68927DF6F9600A4B822 /* LoginViewController.swift */; };
@@ -20,13 +22,14 @@
 		F7CFCC6727DF7617008CEF41 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFCC6627DF7617008CEF41 /* GlobalVariables.swift */; };
 		F7CFCC6E27DF9BD6008CEF41 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFCC6C27DF9BD6008CEF41 /* SearchTableViewCell.swift */; };
 		F7CFCC6F27DF9BD6008CEF41 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CFCC6D27DF9BD6008CEF41 /* SearchTableViewCell.xib */; };
-		F7CFCC7227DF9E17008CEF41 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFCC7127DF9E17008CEF41 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		435F377A90A70C70B741A613 /* Pods-patInsta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-patInsta.debug.xcconfig"; path = "Target Support Files/Pods-patInsta/Pods-patInsta.debug.xcconfig"; sourceTree = "<group>"; };
 		B4CE46924FDEDD713313101F /* Pods_patInsta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_patInsta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D286DFC8C3ED158AF151D417 /* Pods-patInsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-patInsta.release.xcconfig"; path = "Target Support Files/Pods-patInsta/Pods-patInsta.release.xcconfig"; sourceTree = "<group>"; };
+		F738905627E127B2006BB61E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		F738905827E13C4C006BB61E /* Followers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Followers.swift; sourceTree = "<group>"; };
 		F788D68227DF6F9600A4B822 /* patInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = patInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F788D68527DF6F9600A4B822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F788D68727DF6F9600A4B822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +43,6 @@
 		F7CFCC6627DF7617008CEF41 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		F7CFCC6C27DF9BD6008CEF41 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F7CFCC6D27DF9BD6008CEF41 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
-		F7CFCC7127DF9E17008CEF41 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +99,11 @@
 				F788D68527DF6F9600A4B822 /* AppDelegate.swift */,
 				F788D68727DF6F9600A4B822 /* SceneDelegate.swift */,
 				F7CFCC6227DF757E008CEF41 /* User.swift */,
+				F738905827E13C4C006BB61E /* Followers.swift */,
 				F7CFCC6627DF7617008CEF41 /* GlobalVariables.swift */,
 				F788D68927DF6F9600A4B822 /* LoginViewController.swift */,
 				F7CFCC6027DF722C008CEF41 /* SearchViewController.swift */,
-				F7CFCC7127DF9E17008CEF41 /* SearchViewModel.swift */,
+				F738905627E127B2006BB61E /* UserViewController.swift */,
 				F788D68B27DF6F9600A4B822 /* Main.storyboard */,
 				F7CFCC7027DF9BDC008CEF41 /* SearchTableViewCell */,
 				F788D68E27DF6F9700A4B822 /* Assets.xcassets */,
@@ -242,11 +245,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F788D68A27DF6F9600A4B822 /* LoginViewController.swift in Sources */,
+				F738905727E127B2006BB61E /* UserViewController.swift in Sources */,
 				F788D68627DF6F9600A4B822 /* AppDelegate.swift in Sources */,
 				F7CFCC6127DF722C008CEF41 /* SearchViewController.swift in Sources */,
 				F7CFCC6727DF7617008CEF41 /* GlobalVariables.swift in Sources */,
 				F7CFCC6E27DF9BD6008CEF41 /* SearchTableViewCell.swift in Sources */,
-				F7CFCC7227DF9E17008CEF41 /* SearchViewModel.swift in Sources */,
+				F738905927E13C4C006BB61E /* Followers.swift in Sources */,
 				F7CFCC6327DF757E008CEF41 /* User.swift in Sources */,
 				F788D68827DF6F9600A4B822 /* SceneDelegate.swift in Sources */,
 			);
