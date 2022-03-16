@@ -52,8 +52,13 @@ class SearchViewController: UIViewController {
             users = userList
         }
         title = "Search for users"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "People", style: .plain, target: self, action: #selector(goToPeople))
     }
     
+    @objc func goToPeople() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
     func showLogin() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
         vc?.modalPresentationStyle = .fullScreen
@@ -119,9 +124,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
                 loadUsersData()
                 if !selectedUsers.contains(where: {$0.user.username == userData.user.username}) {
                     selectedUsers.append(userData)
-                    saveUsersData(userData: userList![indexPath.row])
+//                    saveUsersData(userData: userList![indexPath.row])
+                    saveUsersData(userData: selectedUsers)
                 }
-                vc.selectedUsers = self.selectedUsers
+//                vc.selectedUsers = self.selectedUsers
             }
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -170,7 +176,7 @@ extension SearchViewController {
 
 extension SearchViewController {
     
-    func saveUsersData(userData: UserElement) {
+    func saveUsersData(userData: [UserElement]) {
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(selectedUsers)
