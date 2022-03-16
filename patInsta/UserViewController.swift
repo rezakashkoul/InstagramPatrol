@@ -54,6 +54,9 @@ class UserViewController: UIViewController {
             do {
                 let decoder = JSONDecoder()
                 selectedUsers = try decoder.decode([UserElement].self, from: data)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             } catch {
                 print("Unable to Decode userData (\(error))")
             }
@@ -74,6 +77,8 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
         
         cell.userNameLabel.text = selectedUsers?[indexPath.row].user.username
+        cell.totalFollowerLabel.text = "Total Followers:" + " " + (userFollowerCount?.description ?? "")
+        cell.loadedFollowerLabel.text = "Its loading..."
         let url = URL(string: selectedUsers?[indexPath.row].user.profilePicURL ?? "")
         do {
             DispatchQueue.global(qos: .background).async {

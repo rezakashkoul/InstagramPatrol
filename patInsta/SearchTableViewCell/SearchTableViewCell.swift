@@ -11,7 +11,8 @@ class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
-    
+    @IBOutlet weak var totalFollowerLabel: UILabel!
+    @IBOutlet weak var loadedFollowerLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
