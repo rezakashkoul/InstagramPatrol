@@ -96,7 +96,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Here..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-aW-Msd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <rect key="frame" x="8" y="88" width="398" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9YO-Wg-Xfu"/>
                                 </constraints>
@@ -114,8 +114,8 @@
                             <constraint firstAttribute="bottom" secondItem="YUR-zQ-W7m" secondAttribute="bottom" id="6AK-Nu-7pr"/>
                             <constraint firstItem="eyB-X7-CNV" firstAttribute="trailing" secondItem="YUR-zQ-W7m" secondAttribute="trailing" id="FLN-hu-GaQ"/>
                             <constraint firstItem="YUR-zQ-W7m" firstAttribute="leading" secondItem="eyB-X7-CNV" secondAttribute="leading" id="R5r-Pb-Ice"/>
-                            <constraint firstItem="xdU-aW-Msd" firstAttribute="leading" secondItem="eyB-X7-CNV" secondAttribute="leading" id="Zuo-nE-AZd"/>
-                            <constraint firstItem="eyB-X7-CNV" firstAttribute="trailing" secondItem="xdU-aW-Msd" secondAttribute="trailing" id="alr-aL-YPP"/>
+                            <constraint firstItem="xdU-aW-Msd" firstAttribute="leading" secondItem="eyB-X7-CNV" secondAttribute="leading" constant="8" id="Zuo-nE-AZd"/>
+                            <constraint firstItem="eyB-X7-CNV" firstAttribute="trailing" secondItem="xdU-aW-Msd" secondAttribute="trailing" constant="8" id="alr-aL-YPP"/>
                             <constraint firstItem="xdU-aW-Msd" firstAttribute="top" secondItem="eyB-X7-CNV" secondAttribute="top" id="tXO-fn-bft"/>
                         </constraints>
                     </view>

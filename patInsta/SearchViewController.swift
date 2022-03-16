@@ -127,7 +127,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 //                    saveUsersData(userData: userList![indexPath.row])
                     saveUsersData(userData: selectedUsers)
                 }
-//                vc.selectedUsers = self.selectedUsers
+                vc.userName = userData.user.username
             }
             navigationController?.pushViewController(vc, animated: true)
         }

@@ -23,6 +23,7 @@ class UserViewController: UIViewController {
             }
         }
     }
+    var userName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,12 @@ class UserViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchTableViewCell")
         loadUsersData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let userName = userName else { return }
+        getUserProfile(userName: userName)
     }
     
     func saveUsersData(userData: [UserElement]) {
@@ -130,6 +137,50 @@ extension UserViewController {
                     let decoder = JSONDecoder()
                     let userData = try decoder.decode(UserFollowers.self, from: json)
                     followerList = userData
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print("***** error in parse data")
+                    print(error.localizedDescription)
+                }
+            }, onError: {(error) in
+                print("***** error in OnError",error)
+                print(error.localizedDescription)
+            }).disposed(by: disposeBag)
+        
+    }
+}
+
+
+extension UserViewController {
+    
+    func getUserProfile(userName: String) {
+        
+        let url = "https://www.instagram.com/\(userName)/?__a=1&__d=dis"
+        
+        let headers = [
+            "Accept" : "*/*",
+            "Accept-Language" : "en-US,en;q=0.9",
+            "Accept-Encoding" : "gzip, deflate, br",
+            "Host" : "www.instagram.com",
+            "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15",
+            "Connection" : " keep-alive",
+            "Referer" : "https://www.instagram.com/\(userName)/",
+            "Cookie" : cookie ,
+            "X-ASBD-ID" : "198387",
+            "X-Requested-With":"XMLHttpRequest",
+            "X-IG-App-ID" : "936619743392459",
+            "X-IG-WWW-Claim" : "hmac.AR2YgqsTVBo4dOn5nhwrI9RM8-vz2c-0fgyMQe2oHZZ7ScCD"
+        ]
+        
+        RxAlamofire.requestData(.get, url, headers: HTTPHeaders(headers))
+            .subscribe(onNext: { [weak self] (response, json) in
+                guard let self = self else { return }
+                do {
+                    let decoder = JSONDecoder()
+                    let userData = try decoder.decode(UserProfile.self, from: json)
+                    userFollowerCount = userData.graphql.user.edge_followed_by.count
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }

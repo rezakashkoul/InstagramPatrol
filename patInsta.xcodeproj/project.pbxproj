@@ -10,6 +10,7 @@
 		E02B2D2C0C004C21A7D54120 /* Pods_patInsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CE46924FDEDD713313101F /* Pods_patInsta.framework */; };
 		F738905727E127B2006BB61E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738905627E127B2006BB61E /* UserViewController.swift */; };
 		F738905927E13C4C006BB61E /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738905827E13C4C006BB61E /* Followers.swift */; };
+		F73B122227E21DC5000CA0C6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73B122127E21DC5000CA0C6 /* UserProfile.swift */; };
 		F788D68627DF6F9600A4B822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68527DF6F9600A4B822 /* AppDelegate.swift */; };
 		F788D68827DF6F9600A4B822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68727DF6F9600A4B822 /* SceneDelegate.swift */; };
 		F788D68A27DF6F9600A4B822 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788D68927DF6F9600A4B822 /* LoginViewController.swift */; };
@@ -30,6 +31,7 @@
 		D286DFC8C3ED158AF151D417 /* Pods-patInsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-patInsta.release.xcconfig"; path = "Target Support Files/Pods-patInsta/Pods-patInsta.release.xcconfig"; sourceTree = "<group>"; };
 		F738905627E127B2006BB61E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F738905827E13C4C006BB61E /* Followers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Followers.swift; sourceTree = "<group>"; };
+		F73B122127E21DC5000CA0C6 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		F788D68227DF6F9600A4B822 /* patInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = patInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F788D68527DF6F9600A4B822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F788D68727DF6F9600A4B822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				F788D68527DF6F9600A4B822 /* AppDelegate.swift */,
 				F788D68727DF6F9600A4B822 /* SceneDelegate.swift */,
 				F7CFCC6227DF757E008CEF41 /* User.swift */,
+				F73B122127E21DC5000CA0C6 /* UserProfile.swift */,
 				F738905827E13C4C006BB61E /* Followers.swift */,
 				F7CFCC6627DF7617008CEF41 /* GlobalVariables.swift */,
 				F788D68927DF6F9600A4B822 /* LoginViewController.swift */,
@@ -246,6 +249,7 @@
 			files = (
 				F788D68A27DF6F9600A4B822 /* LoginViewController.swift in Sources */,
 				F738905727E127B2006BB61E /* UserViewController.swift in Sources */,
+				F73B122227E21DC5000CA0C6 /* UserProfile.swift in Sources */,
 				F788D68627DF6F9600A4B822 /* AppDelegate.swift in Sources */,
 				F7CFCC6127DF722C008CEF41 /* SearchViewController.swift in Sources */,
 				F7CFCC6727DF7617008CEF41 /* GlobalVariables.swift in Sources */,
