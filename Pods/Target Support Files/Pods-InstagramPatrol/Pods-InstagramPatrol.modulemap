@@ -1,0 +1,6 @@
+framework module Pods_InstagramPatrol {
+  umbrella header "Pods-InstagramPatrol-umbrella.h"
+
+  export *
+  module * { export * }
+}
